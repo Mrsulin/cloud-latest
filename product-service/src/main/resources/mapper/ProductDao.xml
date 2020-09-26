@@ -8,6 +8,7 @@
         <result property="productType" column="product_type" jdbcType="VARCHAR"/>
         <result property="price" column="price" jdbcType="NUMERIC"/>
         <result property="placeId" column="place_id" jdbcType="VARCHAR"/>
+        <result property="rawId" column="raw_id" jdbcType="VARCHAR"/>
     </resultMap>
 
 </mapper>

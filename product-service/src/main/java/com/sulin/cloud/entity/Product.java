@@ -37,6 +37,11 @@ public class Product extends Model<Product> implements Serializable {
      */
     private String placeId;
 
+    /**
+     * 原料id
+     */
+    private String rawId;
+
     @Override
     protected Serializable pkVal() {
         return this.id;

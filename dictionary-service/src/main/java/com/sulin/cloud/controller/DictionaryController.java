@@ -19,7 +19,7 @@ import java.util.List;
  * @author slc
  * @since 2020-09-26 22:41:41
  */
-@Api(tags = "-控制器")
+@Api(tags = "字典-控制器")
 @RestController
 @RequestMapping("dictionary")
 public class DictionaryController {
