@@ -24,7 +24,6 @@ spring:
       enabled: true
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
-  typeAliasesPackage: com.sulin.cloud.*.entity
   global-config:
     db-config:
       id-type: uuid

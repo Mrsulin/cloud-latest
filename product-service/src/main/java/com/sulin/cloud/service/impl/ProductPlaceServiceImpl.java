@@ -1,9 +1,9 @@
 package com.sulin.cloud.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sulin.cloud.common.modules.product.entity.ProductPlace;
 import com.sulin.cloud.service.ProductPlaceService;
 import com.sulin.cloud.dao.ProductPlaceDao;
-import com.sulin.cloud.entity.ProductPlace;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

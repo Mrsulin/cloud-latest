@@ -1,4 +1,4 @@
-package com.sulin.cloud.entity;
+package com.sulin.cloud.common.modules.raw.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;

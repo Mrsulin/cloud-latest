@@ -1,8 +1,10 @@
 package com.sulin.cloud.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sulin.cloud.entity.Product;
+import com.sulin.cloud.common.modules.product.entity.Product;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * (Product)表数据库访问层

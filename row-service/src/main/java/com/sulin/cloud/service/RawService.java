@@ -1,7 +1,7 @@
 package com.sulin.cloud.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.sulin.cloud.entity.Raw;
+import com.sulin.cloud.common.modules.raw.entity.Raw;
 
 /**
  * (Raw)表服务接口

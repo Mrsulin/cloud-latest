@@ -1,7 +1,7 @@
 package com.sulin.cloud.controller;
 
+import com.sulin.cloud.common.modules.product.entity.ProductPlace;
 import com.sulin.cloud.common.utils.R;
-import com.sulin.cloud.entity.ProductPlace;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.sulin.cloud.service.ProductPlaceService;

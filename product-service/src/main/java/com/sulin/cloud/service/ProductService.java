@@ -1,7 +1,7 @@
 package com.sulin.cloud.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.sulin.cloud.entity.Product;
+import com.sulin.cloud.common.modules.product.entity.Product;
 
 /**
  * (Product)表服务接口

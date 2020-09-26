@@ -2,7 +2,7 @@ package com.sulin.cloud.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sulin.cloud.dao.RawDao;
-import com.sulin.cloud.entity.Raw;
+import com.sulin.cloud.common.modules.raw.entity.Raw;
 import com.sulin.cloud.service.RawService;
 import org.springframework.stereotype.Service;
 

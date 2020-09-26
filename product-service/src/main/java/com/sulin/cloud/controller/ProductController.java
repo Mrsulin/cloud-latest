@@ -1,13 +1,15 @@
 package com.sulin.cloud.controller;
 
+import com.sulin.cloud.common.modules.product.entity.Product;
+import com.sulin.cloud.common.modules.product.vo.ProductQueryVo;
+import com.sulin.cloud.common.modules.raw.entity.Raw;
 import com.sulin.cloud.common.utils.R;
-import com.sulin.cloud.entity.Product;
+import com.sulin.cloud.dao.ProductDao;
+import com.sulin.cloud.feign.RowFeignService;
 import com.sulin.cloud.service.ProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -28,11 +30,28 @@ public class ProductController {
     @Resource
     private ProductService productService;
 
+    @Resource
+    private RowFeignService rowFeignService;
 
-    @GetMapping("list")
-    @ApiOperation(value = "用户列表")
-    public R list() {
+
+    @PostMapping("list")
+    @ApiOperation(value = "1")
+    public R list(@RequestBody ProductQueryVo productQueryVo) {
         List<Product> list = productService.list();
         return R.ok().put("data",list);
+    }
+
+    @GetMapping("feign/raw")
+    @ApiOperation(value = "2")
+    public R list() {
+        List<Raw> rowList = rowFeignService.getRowList();
+        return R.ok().put("data",rowList);
+    }
+
+    @GetMapping("R/feign/raw")
+    @ApiOperation(value = "3")
+    public R rFeign() {
+        R r = rowFeignService.rList();
+        return r;
     }
 }

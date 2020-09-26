@@ -1,7 +1,7 @@
 package com.sulin.cloud.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sulin.cloud.entity.ProductPlace;
+import com.sulin.cloud.common.modules.product.entity.ProductPlace;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

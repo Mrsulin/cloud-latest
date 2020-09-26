@@ -1,7 +1,7 @@
 package com.sulin.cloud.controller;
 
 import com.sulin.cloud.common.utils.R;
-import com.sulin.cloud.entity.Raw;
+import com.sulin.cloud.common.modules.raw.entity.Raw;
 import com.sulin.cloud.service.RawService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,7 +21,7 @@ import java.util.List;
  */
 @Api(tags = "原料-控制器")
 @RestController
-@RequestMapping("raw")
+@RequestMapping("/raw")
 public class RawController {
     /**
      * 服务对象
@@ -30,10 +30,16 @@ public class RawController {
     private RawService rawService;
 
 
-    @GetMapping("list")
+    @GetMapping("/R/list")
     @ApiOperation(value = "原料列表")
     public R list() {
         List<Raw> list = rawService.list();
-        return R.ok().put("data",list);
+        return R.ok().put("data", list);
+    }
+
+    @GetMapping("/list")
+    @ApiOperation(value = "feign list")
+    public List<Raw> getRowList() {
+        return rawService.list();
     }
 }
