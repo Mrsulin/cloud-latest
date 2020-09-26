@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sulin.cloud.dao.RawDao">
+
+    <resultMap type="com.sulin.cloud.entity.Raw" id="RawMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="rawName" column="raw_name" jdbcType="VARCHAR"/>
+        <result property="isSafe" column="is_safe" jdbcType="BOOLEAN"/>
+        <result property="rareLevel" column="rare_level" jdbcType="INTEGER"/>
+    </resultMap>
+
+</mapper>
