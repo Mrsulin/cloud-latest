@@ -11,12 +11,12 @@ import java.util.List;
 /**
  * @author slc
  */
-@FeignClient(name = "rowService", url = "${remote.url}/raw",fallback = RowFeignFallbackService.class)
+@FeignClient(name = "RAW-PROVIDER",fallback = RowFeignFallbackService.class)
 public interface RowFeignService {
 
     @GetMapping("/list")
     List<Raw> getRowList();
 
-    @GetMapping("/R/list")
+    @GetMapping("/raw//R/list")
     R rList();
 }
