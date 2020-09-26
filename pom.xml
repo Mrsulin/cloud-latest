@@ -13,6 +13,7 @@
         <module>raw-service</module>
         <module>common</module>
         <module>dictionary-service</module>
+        <module>gateway</module>
     </modules>
 
 
