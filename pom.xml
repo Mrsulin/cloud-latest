@@ -18,7 +18,7 @@
 
 
     <properties>
-        <cloud.version>Greenwich.SR4</cloud.version>
+        <cloud.version>Greenwich.SR1</cloud.version>
         <lombok.version>1.18.12</lombok.version>
         <druid.version>1.1.13</druid.version>
         <swagger.version>2.7.0</swagger.version>
@@ -26,7 +26,7 @@
         <mybatis-plus.version>3.2.0</mybatis-plus.version>
         <mysql.version>8.0.18</mysql.version>
         <fastjson.version>1.2.58</fastjson.version>
-        <cloud-alibaba.version>2.1.2.RELEASE</cloud-alibaba.version>
+        <cloud-alibaba.version>2.1.1.RELEASE</cloud-alibaba.version>
         <shiro.version>1.4.0</shiro.version>
     </properties>
 
@@ -46,6 +46,13 @@
             </dependency>
 
             <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
                 <version>${shiro.version}</version>
@@ -57,13 +64,6 @@
                 <version>${shiro.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${cloud-alibaba.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>

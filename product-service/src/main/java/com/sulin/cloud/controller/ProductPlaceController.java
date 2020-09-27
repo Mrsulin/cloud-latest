@@ -20,7 +20,7 @@ import java.util.List;
  */
 @RestController
 @Api(tags = "产品-生产地 控制器")
-@RequestMapping("productPlace")
+@RequestMapping("/product/place")
 public class ProductPlaceController {
     /**
      * 服务对象

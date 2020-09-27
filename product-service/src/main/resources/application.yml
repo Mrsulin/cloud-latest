@@ -12,5 +12,6 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        username: nacos
-        password: nacos
+#ribbon:
+#  ...配置ribbon的相关参数
+#     参数相关的配置文件在core包的client的config下

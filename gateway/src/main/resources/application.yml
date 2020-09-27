@@ -1,0 +1,55 @@
+spring:
+  profiles:
+    include: common
+  application:
+    name: GATEWAY_SERVICE
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#        第1种 yml 静态配置
+#        第2种 config 代码配置
+#        第3种 动态路由 需要开启locator获取支持  uri地址需要 lb://
+    gateway:
+      routes:
+#        - id: PRODUCT-PROVIDER
+#          uri: http://localhost:8001
+#          predicates:
+#            - Path=/product/**
+#
+#        - id: DICTIONARY-PROVIDER
+#          uri: http://localhost:8002
+#          predicates:
+#            - Path=/dictionary/**
+#
+#        - id: RAW-PROVIDER
+#          uri: http://localhost:8003
+#          predicates:
+#            - Path=/raw/**
+
+
+        - id: DICTIONARY-PROVIDER
+          uri: lb://DICTIONARY-PROVIDER
+          predicates:
+            - Path=/dictionary/**
+#            针对单个路由的 过滤器配置
+#          filters:
+#            -xxxxx
+#      开启动态路由的功能
+      discovery:
+        locator:
+          enabled: true
+
+#以下是常见的内置路由断言
+#[After]
+#[Before]
+#[Between]   2020-09-28T00:38:22.485+08:00[Asia/Shanghai]     ---java8 时间api可以得到该格式
+#[Cookie]  -Cookie=username,123                               - Cookie=key,value
+#[Header]                                                     - Header=属性名称（头）,正则表达式（值）
+#[Host]
+#[Method]
+#[Path]
+#[Query]
+#[ReadBodyPredicateFactory]
+#[RemoteAddr]
+#[Weight]
